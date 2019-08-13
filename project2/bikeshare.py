@@ -48,7 +48,7 @@ def get_filters():
 
     # TO DO: get user input for month (all, january, february, ... , june)
     month = input('Month (all, january, february, ... , june):')
-    month = 'June'
+    month = 'all'
     while True:        
         if (month in MONTH_DATA):
             month = MONTH_DATA[month]
@@ -57,7 +57,7 @@ def get_filters():
             month = input('Incorrect Input. Try again.\nMonth (all, january, february, ... , june):')
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day = input('Day (all, monday, tuesday, ... sunday):')
-    day = 'Monday'
+    day = 'all'
     while True:        
         if (day in DAY_DATA):
             break;
@@ -98,8 +98,27 @@ def time_stats(df):
     start_time = time.time()
 
     # TO DO: display the most common month
+    # https://www.jianshu.com/p/41039996d867
+    # https://www.jianshu.com/p/b91e3ae940ec
+    # https://www.jianshu.com/p/00a61efc187b
+    
+    df = df.set_index('Start Time')#.dropna(axis = 0)
+    #print (df.count())
 
+    
+    #df_period.dropna(axis = 0)
+    #df['number'] = 0
+    #s = pd.Series(df['number'], index=df.index)
+    #print (df.head())
 
+    #df_period = df.to_period('M')
+    # print (df_period)
+    # print(df.resample('M').sum().head())
+    print(df.resample('M').count().to_period('M').head())
+    #s = pd.Series(df_period['number'], index=df_period.index)
+    #print (s)
+    #print (df_period.index.asfreq('M'))
+    #print (df_period.index.asfreq('M'))
     # TO DO: display the most common day of week
 
 
