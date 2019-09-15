@@ -87,13 +87,12 @@ def load_data(city, month, day):
     """
     df = pd.read_csv(CITY_DATA[city])
     df['Start Time'] = pd.to_datetime(df['Start Time'])
-    if (month != 0):        
+    if (month != 0): 
         filter = df['Start Time'].dt.month == month
         df.where(filter, inplace = True)
-    if (day.lower() != "all"):  
-        filter = df['Start Time'].dt.weekday_name == day
+    if (day.lower() != "all"): 
+        filter = df['Start Time'].dt.weekday_name == day.capitalize()
         df.where(filter, inplace = True)
-    #print (df.head(10))
     return df
 
 
@@ -177,13 +176,18 @@ def user_stats(df):
     print('The counts of user types:\n', df['User Type'].value_counts())
 
     # TO DO: Display counts of gender
-    print('The counts of gender:\n', df['Gender'].value_counts())
+    try:
+        print('The counts of gender:\n', df['Gender'].value_counts())
+    except KeyError:
+        print("There isn't a [Gender] column in this spreedsheet!")
 
     # TO DO: Display earliest, most recent, and most common year of birth
-    print('The earliest year of birth: ', int(df['Birth Year'].min()))
-    print('The most recent year of birth: ', int(df['Birth Year'].max()))
-    print('The most recent year of birth: ', int(df['Birth Year'].value_counts().index[0]))
-
+    try:
+        print('The earliest year of birth: ', int(df['Birth Year'].min()))
+        print('The most recent year of birth: ', int(df['Birth Year'].max()))
+        print('The most recent year of birth: ', int(df['Birth Year'].value_counts().index[0]))
+    except KeyError:
+        print("There isn't a [Birth Year] column in this spreedsheet!")
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
