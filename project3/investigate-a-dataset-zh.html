@@ -13131,7 +13131,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 用这个框对你计划使用的所有数据包进行设置</span>
@@ -13155,7 +13155,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 解决中文和负号显示错误</span>
@@ -13183,7 +13183,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 加载数据并打印几行。进行这几项操作，来检查数据</span>
@@ -13202,7 +13202,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -13287,7 +13287,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
@@ -13303,7 +13303,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13320,7 +13320,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
@@ -13336,7 +13336,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -13409,7 +13409,7 @@ revenue_adj：调整后收入<br></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 在讨论数据结构和需要解决的任何问题之后，</span>
@@ -13427,7 +13427,7 @@ revenue_adj：调整后收入<br></p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -13455,6 +13455,41 @@ release_year            False
 budget_adj              False
 revenue_adj             False
 dtype: bool</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 其中风格列为空的</span>
+<span class="n">count</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;genres&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">count</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>23</pre>
 </div>
 
 </div>
@@ -13595,7 +13630,25 @@ dtype: bool</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>小结：</em></strong></p>
+<p>首先通过柱状图，展示出各种风格电影的总数量，以初步得出那些风格的电影比较热门。
+总体来看，Drama、Comedy、Thriller等风格总量较多。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#30740;&#31350;&#38382;&#39064;2&#65306;&#30005;&#24433;&#39118;&#26684;&#38543;&#26102;&#38388;&#30340;&#21464;&#21270;&#36235;&#21183;">&#30740;&#31350;&#38382;&#39064;2&#65306;&#30005;&#24433;&#39118;&#26684;&#38543;&#26102;&#38388;&#30340;&#21464;&#21270;&#36235;&#21183;<a class="anchor-link" href="#&#30740;&#31350;&#38382;&#39064;2&#65306;&#30005;&#24433;&#39118;&#26684;&#38543;&#26102;&#38388;&#30340;&#21464;&#21270;&#36235;&#21183;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>由于分析的数据时间跨度有50多年，那么，这些热门风格题材的电影，会不会已经随时间发生了变化呢？</p>
+
 </div>
 </div>
 </div>
@@ -13666,7 +13719,25 @@ dtype: bool</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>小结：</em></strong></p>
+<p>采用折线图显示大致的趋势。
+结果，发现较为热门的电影风格基本保持呈现了更快的增长，而较为冷门的风格，增长缓慢。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#30740;&#31350;&#38382;&#39064;3&#65306;-&#30005;&#24433;&#39118;&#26684;&#30340;&#25910;&#20837;">&#30740;&#31350;&#38382;&#39064;3&#65306; &#30005;&#24433;&#39118;&#26684;&#30340;&#25910;&#20837;<a class="anchor-link" href="#&#30740;&#31350;&#38382;&#39064;3&#65306;-&#30005;&#24433;&#39118;&#26684;&#30340;&#25910;&#20837;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>那么，热门电影风格，是不是带来了更多的票房收入呢？</p>
+
 </div>
 </div>
 </div>
@@ -13759,7 +13830,24 @@ dtype: bool</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>小结：</em></strong></p>
+<p>通过这小节的分析，发现，虽然热门电影在票房收入也是占据了领先，但是，数量最多的Drama、Comedy、Thriller类电影，总票房却低于Action和Adventure。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#30740;&#31350;&#38382;&#39064;4&#65306;-&#30005;&#24433;&#39118;&#26684;&#19982;&#25910;&#30410;&#30340;&#20851;&#31995;">&#30740;&#31350;&#38382;&#39064;4&#65306; &#30005;&#24433;&#39118;&#26684;&#19982;&#25910;&#30410;&#30340;&#20851;&#31995;<a class="anchor-link" href="#&#30740;&#31350;&#38382;&#39064;4&#65306;-&#30005;&#24433;&#39118;&#26684;&#19982;&#25910;&#30410;&#30340;&#20851;&#31995;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>进一步分析电影风格、投入与收益之间的关系。</p>
+
 </div>
 </div>
 </div>
@@ -13875,6 +13963,15 @@ dtype: bool</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>小结：</em></strong></p>
+<p>可以看出，相对热门的电影风格，其投资收益率总体良好。同时，其中热度排在第二梯队的风格，表现出了更好的投资回报率。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><a id='conclusions'></a></p>
 <h2 id="&#32467;&#35770;">&#32467;&#35770;<a class="anchor-link" href="#&#32467;&#35770;">&#182;</a></h2><ol>
 <li>自1960年来，从电影数量上看，整体呈上涨趋势</li>
@@ -13882,6 +13979,11 @@ dtype: bool</pre>
 <li>但是，近两年，以往最热门的剧情、喜剧、动作类电影略有下降的趋势</li>
 <li>从票房收入的角度看，热门风格的电影也占据了排名的前列</li>
 <li>热门风格的电影，在投资回报率上的表现也不错。不过，值得注意的是，票房收入排名5到10位的电影风格，投资回报率超过了前5位。</li>
+</ol>
+<p><strong><em>可能的局限性</em></strong></p>
+<ol>
+<li>并不能确定数据中是否已经包含了所有电影： 数据中没有出品国籍，而通过浏览数据，发现其中基本为欧美电影，不确定是否确实亚洲电影市场的数据。</li>
+<li>数据中缺少风格信息的数据，只有23条，大约为总量的千分之二。</li>
 </ol>
 
 </div>
